@@ -16,7 +16,7 @@ pipeline{
                 echo 'chmod 777 a1'
             }
         }
-        stage('file excccreation'){
+        stage('file ecreation'){
             steps{
                 echo 'touch b1'
             }
