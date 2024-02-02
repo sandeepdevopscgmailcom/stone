@@ -1,23 +1,22 @@
 pipeline{
     agent any
     stages{
-        stage(file creation){
+        stage('file creation'){
             steps{
                 echo 'touch a1'
             }
         }
-        stage(inputting into file){
+        stage('inputting into file'){
             steps{
-                echo 'cat > a1
-                this is a1'
+                echo 'touch a2'
             }
         }
-        stage(permissions of file){
+        stage('permissions of file'){
             steps{
                 echo 'chmod 777 a1'
             }
         }
-        stage(file creation){
+        stage('file creation'){
             steps{
                 echo 'touch b1'
             }
