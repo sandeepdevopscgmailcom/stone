@@ -3,22 +3,22 @@ pipeline{
     stages{
         stage('file creation'){
             steps{
-                echo 'touch a1'
+                sh''' cat /etc/os-release  '''
             }
         }
-        stage('inputting into file'){
+        stage('memory details'){
             steps{
-                echo 'touch a2'
+                sh''' free -mh  '''
             }
         }
-        stage('permissions of file'){
+        stage('creation of file'){
             steps{
-                echo 'chmod 777 a1'
+                sh''' touch a1  '''
             }
         }
-        stage('file ecreation'){
+        stage('changing permissions of a file'){
             steps{
-                echo 'touch b1'
+                sh''' chmod 777 a1  '''
             }
         }
 
